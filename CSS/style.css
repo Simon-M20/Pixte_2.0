@@ -1,0 +1,498 @@
+/* #fe8e4b */
+
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(34, 34, 34, 0.85);
+    scroll-behavior: smooth;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    background: #0c4160;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:active{
+    background-color: #0c4160;
+    border-radius: 20px;
+}
+
+
+
+header {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background-color: #fbfbfa; */
+    background-color: #f8fafe;
+}
+
+header section article .header__image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+header .header__image .header__color {
+    width: 95%;
+    height: 45%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #0c4160;
+    z-index: -1;
+}
+
+header section nav.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+header section nav.menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+header section nav.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 25%;
+    left: 0;
+}
+
+header section nav.menu ul li {
+    margin: 10px 8px;
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header section nav.menu ul li::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #0c4160;
+    transition: all .3s ease;
+    bottom: -6px;
+}
+header section nav.menu ul li:hover::before {
+    width: 30%;
+}
+
+.menu-btn {
+    display: block; 
+}
+
+header section figure figcaption .header__pixtel, footer section article h4 .footer__title-orange {
+    color: #ff914d;
+}
+
+/*Aside de link a redes sociales */
+.aside__social {
+    display: block;
+    position: fixed;
+    bottom: 15%;
+    left: 5%;
+    z-index: 9999;
+}
+
+.aside__social::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background-color: #0c4160;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.show {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fa-whatsapp, .fa-telegram-plane, .fa-github, .fa-map-marker-alt,
+ .fa-envelope-open-text {
+    transition: all .2s ease-in;
+    color: #0c4160;
+} 
+
+.fa-whatsapp:hover {
+    color: #25d366;
+}
+
+.fa-github:hover {
+    color: gray;
+    /* opacity: .85; */
+}
+
+.fa-instagram {
+    transition: all .2s ease-in;
+    color: #0c4160;
+    border-radius: 8px;
+}
+
+.fa-instagram:hover {
+    padding: 0 2px;
+    color: #fff;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.fa-map-marker-alt:hover, .fa-envelope-open-text:hover {
+    color: #0174ff;
+}
+
+/* .fa-facebook:hover { 
+    color: #3b5998;
+} */
+
+.fa-telegram-plane:hover {
+    color: #0088cc;
+}
+/**/
+
+/* Scroll Top Btn */
+.scroll-top {
+    position: fixed;
+    z-index: 996;
+    outline: none;
+    padding: 6px;
+    bottom: 3vh;
+    right: 2.5vw;
+    width: 2.5rem;
+    height: 2.4rem;
+    border: none;
+    text-decoration: none;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0c4160;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: all .3 ease-out;
+    margin: 0;
+}
+
+.scroll-top:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: #0174ff;
+    cursor: pointer;   
+}
+
+/**/
+
+main .main__about, main .main__benefits, main .main__team {
+    width: 80%;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main__about::before, main .main__services::before, main .main__benefits::before, main .main__proyect::before, main .main__plan::before, main .main__team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    transform: rotate(90deg);
+    height: 2px;
+    width: 10%;
+    background-image: linear-gradient( 94.3deg,  rgb(15, 20, 39) 10.9%, rgb(33, 39, 128) 87.1% );
+}
+
+main .main__about article .main__about-p, main .main__services article div .main__services-p, main .main__benefits article .main__benefits-p, .main__benefits article .main__benefits-p-2, main .main__proyect article div .main__proyect-p, main .main__plan article div .main__plan-p, main .main__team article div .main__team-p  {
+    color: #0c4160;
+    position: relative;
+    font-weight: 700;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 18px;
+}
+
+main .main__about article .main__about-p::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    height: 1.5px;
+    left: 140px;
+    background-color: #0c4160;
+    width: 100%;
+}
+
+main .main__services, main .main__proyect, main .main__plan {
+    /* background-color: #fbfbfa; */
+    background-color: #f8fafe;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main__services article div .main__services-p::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    height: 1.5px;
+    left: 140px;
+    background-color: #0c4160;
+    width: 20%;
+}
+
+main .main__services article div button, main .main__services article article .main__services-card button {
+    background-image: linear-gradient( 94.3deg,  rgb(15, 20, 39) 10.9%, rgb(33, 39, 128) 87.1% );
+    color: #f2f2f2;
+    transition: all .2s;
+}
+
+main .main__services article div button:hover, main .main__services article article .main__services-card button:hover {
+    transform: scale(.9);
+}
+
+main .main__services article div button span.material-icons, main .main__call article .main__call-button span.material-icons {
+    visibility: hidden;
+    opacity: 0;
+    transform: 
+        translateX(-20px);
+        scale: (0);
+    transition: all .3s ease-in;
+}
+
+main .main__services article div button:hover span.material-icons, main .main__call article .main__call-button:hover span.material-icons {
+    visibility: visible;
+    opacity: 1;
+    transform: 
+        translateX(8px);
+        scale: (1);
+}
+
+main .main__services article article .main__services-card {
+    width: 250px;
+    height: 200px;
+    /* background-color: #020202; */
+    background-color: #fbfbfa;
+    margin: 8px;
+    border-radius: 4px;
+    padding: 25px;
+}
+
+main .main__services article article .main__services-card figcaption {
+    color: #0c4160;
+}
+
+main .main__benefits article article .main__benefits-p::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    height: 1.5px;
+    left: 150px;
+    background-color: #0c4160;
+    width: 10%;
+}
+
+main .main__benefits article article .main__benefits-p-2::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    background-color: #0c4160;
+    height: 1.5px;
+    left: 265px;
+    width: 15%;
+}
+
+main .main__proyect article div .main__proyect-p::before {
+    content: '';
+    position: absolute;
+    background-color: #0c4160;
+    bottom: 5px;
+    height: 1.5px;
+    left: 85px;
+    width: 15%;    
+}
+
+main .main__proyect article .main__proyect-button button, main .main__call article .main__call-button {
+    background-color: #0c4160;
+    transition: all .2s ease-in;
+    color: #fff;
+}
+
+main .main__proyect article .main__proyect-button button:hover, main .main__proyect article .main__proyect-button button:focus, main .main__call article .main__call-button:hover, main .main__call article .main__call-button:focus {
+    background-image: linear-gradient( 94.3deg,  rgb(15, 20, 39) 10.9%, rgb(33, 39, 128) 87.1% );
+    color: #f2f2f2;
+    transform: scale(.95);
+}
+
+/* Sipwer Js */
+.swiper {
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 20px; */
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem;
+}
+
+.swiper-slide figure {
+    background-color: #fff;
+}
+
+main .main__call .main__call-article {
+    background-color: #f8fafe;
+}
+
+main .main__plan article div .main__plan-p::before {
+    content: '';
+    position: absolute;
+    background-color: #0c4160;
+    bottom: 5px;
+    height: 1.5px;
+    left: 140px;
+    width: 20%;   
+}
+
+main .main__plan article div .main__plan-card {
+    transition: all .3s ease-in;
+    background-color: #fff;
+}
+
+main .main__plan article div .main__plan-card:hover {
+    transform: translateY(-15px);
+}
+
+main .main__team article div .main__team-p::before {
+    content: '';
+    position: absolute;
+    background-color: #0c4160;
+    bottom: 5px;
+    height: 1.5px;
+    left: 60px;
+    width: 20%;   
+}
+
+main .main__team div.main__team-cards figure {
+    transition: all .3s ease-in;
+    background-color: #fff;
+}
+
+main .main__team div.main__team-cards figure:hover {
+    transform: translateY(-15px);
+}
+
+footer {
+    background-color: #EFF6FF;
+    /* background-color: #1f96db54; */
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+
+    header section nav.menu {
+        width: 80%;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* color: #fff; */
+        font-size: 16px;
+        text-transform: capitalize;
+        /* background-color: transparent; */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header section nav.menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        top: 0;
+    }
+
+    header section nav.menu ul li {
+        margin: 0 8px;
+    }
+
+    header section article .header__image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: -80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+    }
+    
+    header .header__image .header__color {
+        width: 100%;
+        height: 45%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #0c4160;
+        z-index: -1;
+    }
+
+    .menu-btn {
+        display: none !important; 
+    }
+
+    header section article .header__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    header .header__image .header__color {
+        width: 100%;
+        height: 45%;
+    }
+
+    .show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
