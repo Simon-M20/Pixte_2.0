@@ -23,8 +23,6 @@
     border-radius: 20px;
 }
 
-
-
 header {
     width: 100%;
     height: 100%;
@@ -59,18 +57,23 @@ header .header__image .header__color {
 header section nav.menu {
     width: 100%;
     height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 18px;
+    color: #000;
     text-transform: uppercase;
-
+    background-color: #fff;
     opacity: 0;
+    z-index: 997;
     visibility: hidden;
     transition: all .4s;
 }
 
-header section nav.menu.show {
+header section nav.menu.is-active {
     opacity: 1;
     visibility: visible;
 }
@@ -82,7 +85,7 @@ header section nav.menu ul {
     align-items: flex-start;
     position: absolute;
     top: 25%;
-    left: 0;
+    left: 20px;
 }
 
 header section nav.menu ul li {
@@ -108,7 +111,12 @@ header section nav.menu ul li:hover::before {
 }
 
 .menu-btn {
+    z-index: 999;
     display: block; 
+}
+
+header section figure {
+    z-index: 999;
 }
 
 header section figure figcaption .header__pixtel, footer section article h4 .footer__title-orange {
@@ -433,10 +441,10 @@ footer {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* color: #fff; */
+        color: #000;
         font-size: 16px;
         text-transform: capitalize;
-        /* background-color: transparent; */
+        background-color: transparent;
         opacity: 1;
         visibility: visible;
     }
