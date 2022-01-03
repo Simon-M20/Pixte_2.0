@@ -500,4 +500,8 @@ footer {
         opacity: 1;
     }
 
+    main .main__about, main .main__benefits, main .main__team {
+        width: 80%;
+    }
+
 }
