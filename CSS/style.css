@@ -149,7 +149,7 @@ header section figure figcaption .header__pixtel, footer section article h4 .foo
 }
 
 .fa-whatsapp, .fa-telegram-plane, .fa-github, .fa-map-marker-alt,
- .fa-envelope-open-text {
+ .fa-envelope-open-text, .fa-instagram {
     transition: all .2s ease-in;
     color: #0c4160;
 } 
@@ -163,16 +163,11 @@ header section figure figcaption .header__pixtel, footer section article h4 .foo
     /* opacity: .85; */
 }
 
-.fa-instagram {
-    transition: all .2s ease-in;
-    color: #0c4160;
-    border-radius: 8px;
-}
-
 .fa-instagram:hover {
-    padding: 0 2px;
-    color: #fff;
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .fa-map-marker-alt:hover, .fa-envelope-open-text:hover {
@@ -221,7 +216,7 @@ header section figure figcaption .header__pixtel, footer section article h4 .foo
 /**/
 
 main .main__about, main .main__benefits, main .main__team {
-    width: 80%;
+    width: 100%;
     background-color: #fff;
     position: relative;
     display: flex;
@@ -266,6 +261,8 @@ main .main__services, main .main__proyect, main .main__plan {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
 }
 
 main .main__services article div .main__services-p::before {
